@@ -34,6 +34,9 @@ public class Main implements Runnable {
 	
 	private boolean wallsSetup = false; // TODO remove this later
 	
+	/**
+	 * Manages logic of the game.
+	 */
 	public void doLogic() {
 		////////////////////////////////////////////////////////////////////////////
 		//TODO everything in this section will be removed at a later date this is just for testing
