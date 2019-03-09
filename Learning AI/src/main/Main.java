@@ -27,6 +27,10 @@ public class Main implements Runnable {
 	public static Objective obj = new Objective();
 	public static int gen = 1;
 	
+	/**
+	 * Main method.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		mainThread = new Thread(main, "main");
 		mainThread.start();
