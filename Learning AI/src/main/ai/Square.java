@@ -64,7 +64,6 @@ public class Square {
 				if(!Main.obj.checkIfReached(this)) {
 					for(int i = 0; i > x; i--) {
 						this.setX(this.getX() + i);
-						Main.obj.checkIfReached(this);
 					}
 				}
 				if(!Main.obj.checkIfReached(this)) {
