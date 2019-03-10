@@ -20,7 +20,7 @@ public class Main implements Runnable {
 	public final static FrameRateManager frame = new FrameRateManager(graphicsFrameRate);
 	public final static FrameRateManager logic = new FrameRateManager(logicFrameRate);
 	
-	public static final int populationSize = 10000;
+	public static final int populationSize = 1000;
 	
 	public static Wall[] walls = new Wall[100];
 	public static Population pop = new Population(populationSize);
