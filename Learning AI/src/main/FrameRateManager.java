@@ -34,11 +34,10 @@ public class FrameRateManager {
 				Thread.sleep((long) (this.oneFrameInterval - (this.endingTime - this.startingTime)));
 				return;
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				System.out.println("Failed to check frame speed in FrameRateManager.java, this should not have happened");
 			}
 		}
 		System.out.println("ERROR frame failed to load");
-		return;
 	}
 	
 	///// Setters /////

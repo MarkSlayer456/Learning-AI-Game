@@ -17,11 +17,13 @@ public class Objective {
 		
 	}
 	
-	public void checkIfReached(Square sq) {
+	public boolean checkIfReached(Square sq) {
 			if(sq.getX() + sq.getLength() < this.getX() + this.getLength() && 
 			sq.getX() > this.getX() && sq.getY() + sq.getLength() < this.getY() + this.getLength() && sq.getY() > this.getY()) {
 				sq.setObjectComplete(true);
+				return true;
 			}
+			return false;
 	}
 	
 	

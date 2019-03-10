@@ -23,14 +23,14 @@ public class Square {
 	private boolean hitWall;
 	
 	public Square() {
-		state = new PVector();
-		acc = new PVector();
-		vel = new PVector();
-		length = 5;
+		this.state = new PVector();
+		this.acc = new PVector();
+		this.vel = new PVector();
+		this.length = 5;
 		this.x = 300;
 		this.y = 500;
-		alive = true;
-		brain = new Brain(BRAIN_SIZE);
+		this.alive = true;
+		this.brain = new Brain(BRAIN_SIZE);
 		this.fitness = 0;
 		this.complete = false;
 		this.currentObj = Main.obj;
@@ -56,21 +56,26 @@ public class Square {
 				double y = Math.toRadians(Math.sin(Math.toRadians(this.state.getDir()))) * this.state.getMag();
 //				System.out.println(this.getX() - y);
 //				System.out.println(this.getY() - x);
-				for(int i = 0; i < x; i++) {
-					this.setX(this.getX() + i);
-					Main.obj.checkIfReached(this);
+				if(!Main.obj.checkIfReached(this)) {
+					for(int i = 0; i < x; i++) {
+						this.setX(this.getX() + i);
+					}
 				}
-				for(int i = 0; i > x; i--) {
-					this.setX(this.getX() + i);
-					Main.obj.checkIfReached(this);
+				if(!Main.obj.checkIfReached(this)) {
+					for(int i = 0; i > x; i--) {
+						this.setX(this.getX() + i);
+						Main.obj.checkIfReached(this);
+					}
 				}
-				for(int i = 0; i < y; i++) {
-					this.setY(this.getY() + i);
-					Main.obj.checkIfReached(this);
+				if(!Main.obj.checkIfReached(this)) {
+					for(int i = 0; i < y; i++) {
+						this.setY(this.getY() + i);
+					}
 				}
-				for(int i = 0; i > y; i--) {
-					this.setY(this.getY() + i);
-					Main.obj.checkIfReached(this);
+				if(!Main.obj.checkIfReached(this)) {
+					for(int i = 0; i > y; i--) {
+						this.setY(this.getY() + i);
+					}
 				}
 //				this.setY(y);
 				this.stepsTaken++;
