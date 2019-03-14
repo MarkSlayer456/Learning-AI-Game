@@ -7,7 +7,7 @@ public class Brain {
 	public final static float chanceToMutate = 0.01f;
 	
 	private PVector[] directions;
-	private int size;
+	private final int size;
 	
 	public Brain(int size) {
 		this.size = size;
