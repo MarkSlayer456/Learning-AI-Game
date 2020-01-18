@@ -4,7 +4,16 @@ import java.util.Random;
 
 public class Brain {
 
-	public final static float chanceToMutate = 0.01f;
+	public static float chanceToMutate = 0.01f;
+	public static Square lastBest = new Square();
+	public static int mutateChanceIncreaseCount = 0;
+	public static int mutateChanceDecreaseCount = 0;
+	public static final int mutateDecraseCountLimit = 1;
+	public static final int mutateIncreaseCountLimit = 3;
+	public static final float MUTATION_LIMIT = .5f;
+	public static final float MUTATION_MIN = .01f;
+	
+	public static boolean bestPossibleOutcomeFound = false;
 	
 	private PVector[] directions;
 	private final int size;

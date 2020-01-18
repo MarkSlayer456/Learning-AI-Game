@@ -50,20 +50,24 @@ public class Main implements Runnable {
 		walls[1] = new Wall(ran.nextInt(700) + 100, (ran.nextInt(375) + 100), 50, 50);
 		walls[2] = new Wall(ran.nextInt(700) + 100, (ran.nextInt(375) + 100), 50, 50);
 		walls[3] = new Wall(ran.nextInt(700) + 100, (ran.nextInt(375) + 100), 50, 50);
+		walls[4] = new Wall(ran.nextInt(700) + 100, (ran.nextInt(375) + 100), 50, 50);
+		walls[5] = new Wall(ran.nextInt(700) + 100, (ran.nextInt(375) + 100), 50, 50);
+		walls[6] = new Wall(ran.nextInt(700) + 100, (ran.nextInt(375) + 100), 50, 50);
+		walls[7] = new Wall(ran.nextInt(700) + 100, (ran.nextInt(375) + 100), 50, 50);
 //		walls[4] = new Wall(100, 400, 50, 100);
 //		walls[5] = new Wall(100, 300, 50, 50);
 //		walls[6] = new Wall(200, 300, 50, 50);
 //		walls[7] = new Wall(300, 300, 50, 50);
-//		walls[8] = new Wall(400, 300, 50, 50);
-//		walls[9] = new Wall(500, 300, 50, 50);
-//		walls[10] = new Wall(100, 200, 50, 50);
-//		walls[11] = new Wall(200, 200, 50, 50);
-//		walls[12] = new Wall(300, 200, 50, 50);
-//		walls[13] = new Wall(400, 200, 50, 50);
-//		walls[14] = new Wall(500, 200, 50, 50);
-//		walls[15] = new Wall(600, 400, 50, 50);
-//		walls[16] = new Wall(600, 300, 50, 50);
-//		walls[17] = new Wall(600, 200, 50, 50);
+		walls[8] = new Wall(400, 300, 50, 50);
+		walls[9] = new Wall(500, 300, 50, 50);
+		walls[10] = new Wall(100, 200, 50, 50);
+		walls[11] = new Wall(200, 200, 50, 50);
+		walls[12] = new Wall(300, 200, 50, 50);
+		walls[13] = new Wall(400, 200, 50, 50);
+		walls[14] = new Wall(500, 200, 50, 50);
+		walls[15] = new Wall(600, 400, 50, 50);
+		walls[16] = new Wall(600, 300, 50, 50);
+		walls[17] = new Wall(600, 200, 50, 50);
 		wallsSetup = true;
 		}
 		///////////////////////////////////////////////////////////////////////////////

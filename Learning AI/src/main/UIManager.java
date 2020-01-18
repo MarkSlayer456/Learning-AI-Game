@@ -9,6 +9,8 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import main.ai.Brain;
+import main.ai.Population;
 import main.ai.Square;
 import main.objects.Wall;
 
@@ -55,14 +57,20 @@ public class UIManager {
 				graphics.fill(rect);
 			}
 		}
-		
+		if(Brain.bestPossibleOutcomeFound) {
+			Rectangle2D rect = new Rectangle2D.Double(Population.bestOfBest.getX(), Population.bestOfBest.getY(), Population.bestOfBest.getLength(), Population.bestOfBest.getLength());
+			graphics.setColor(Color.CYAN);
+			graphics.fill(rect);
+			
+		}
 		Square[] squares = Main.pop.getSquares();
 		for(int i = 0; i < squares.length; i++) {
+			
 			if(squares[i].isObjectiveComplete()) {
 				graphics.setColor(Color.GREEN);
 			} else if(squares[i].getHitWall()) {
 				graphics.setColor(Color.RED);
-			} else {
+			} else { //TODO could be else if
 				graphics.setColor(Color.GRAY);
 			}
 			Rectangle2D rect = new Rectangle2D.Double(squares[i].getX(), squares[i].getY(), squares[i].getLength(), squares[i].getLength());

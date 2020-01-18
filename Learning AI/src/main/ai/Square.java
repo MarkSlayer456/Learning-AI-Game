@@ -93,7 +93,9 @@ public class Square {
 		this.calculateFitness();
 		if(Main.pop.getAmountAlive() == 0) {
 			Main.pop.recreate();
-			Main.gen++;
+			if(!Brain.bestPossibleOutcomeFound) {
+				Main.gen++;
+			}
 		}
 	}
 	
@@ -144,6 +146,10 @@ public class Square {
 	
 	public void modifyFitness(int modify) {
 		this.fitness += modify;
+	}
+	
+	public void setFitness(float amount) {
+		this.fitness = amount;
 	}
 	
 	public int getLength() {
